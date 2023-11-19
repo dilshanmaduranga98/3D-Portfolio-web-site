@@ -1,0 +1,82 @@
+.html
+{
+    left: 450px;
+    top: 53px;
+    position: absolute;
+    z-index: 20;
+}
+
+.css
+{
+    left: 360px;
+    top: 203px;
+    position: absolute;
+    z-index: 11;
+}
+
+.js
+{
+    left: 379px;
+    top: 284px;
+    position: absolute;
+    z-index: 11;
+}
+
+.php
+{
+    left: 500px;
+    top:435px;
+    z-index: 18;
+    position: absolute;
+}
+
+.java
+{
+    left: 710px;
+    top: 52px;
+    z-index: 15;
+    position: absolute;
+}
+
+.react
+{
+    left: 834px;
+    top: 183px;
+    z-index: 13;
+    position: absolute;
+}
+
+.tailwind
+{
+    left: 740px;
+    top: 385px;
+    z-index: 18;
+    position: absolute;
+}
+
+
+.Line-one path
+{
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #F78B51;
+   
+}
+
+.Line-one path 
+{
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    animation: animate-line 3s linear infinite;
+}
+
+/* @keyframes animate-line */
+/* {
+    0%{
+        stroke-dashoffset: 300;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+} */
+

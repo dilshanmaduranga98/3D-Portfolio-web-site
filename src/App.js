@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import Home from './Index/Home';
+import NavBar from './components/NavBar';
+import About from './Index/About';
+import Project from './Index/Project';
+import ThreeD from './Index/ThreeD';
+import HomePage from './Index/HomePage';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className='relative'>
+        <div className="fixed  top-[240px] left-[10px] z-[100]">
+          <NavBar/>
+        </div>
+        <HomePage/>
+        {/* <Home/>  */}
+
+        {/* <ThreeD/> */}
     </div>
+    </BrowserRouter>
   );
 }
 
