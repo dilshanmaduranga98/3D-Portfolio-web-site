@@ -13,10 +13,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <div
-     
-      className="z-10 relative overflow-hidden flex flex-col justify-start items-start pt-[30px] mb-[40px] h-[100vh]"
-    >
+    <div className="z-10 relative overflow-hidden flex flex-col justify-start items-start pt-[30px] mb-[40px] h-[100vh]">
       <div
         data-aos="fade-up"
         className="z-[30] flex flex-col items-center justify-center w-full pt-[20px]"
@@ -26,44 +23,14 @@ export default function Skills() {
         </p>
       </div>
 
-      <div className="absolute top-[40px] left-0 z-[20] w-full h-full">
+      <div  data-aos="fade-up" className="absolute top-[40px] left-0 z-[20] w-full h-full">
         <ThreeDText />
       </div>
 
-      <div className="absolute top-[40px] left-5 w-full h-[95%] z-[5]">
-        <ThreeDTextTwo/>
+      <div  data-aos="fade-up" className="absolute top-[40px] left-5 w-full h-[95%] z-[5]">
+        <ThreeDTextTwo />
       </div>
-
-      {/* <div className="relative flex flex-row items-start justify-center w-full p-[50px]">
-        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-          HTML
-        </p>
-
-        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-          CSS
-        </p>
-
-        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-          JS
-        </p>
-
-        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-          PHP
-        </p>
-
-        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-          REACT JS
-        </p>
-
-        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-          TAILWIND CSS
-        </p>
-
-        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-          JAVA
-        </p>
-      </div> */}
-
+      
       <div
         data-aos="fade-up"
         className="absolute top-[10px] left-0 z-[10] w-full h-full pt-[20px]"
@@ -75,7 +42,6 @@ export default function Skills() {
           TexturePath={"./mars_tex.jpg"}
         />
       </div>
-
 
       <div
         data-aos="fade-right"

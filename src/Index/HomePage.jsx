@@ -15,6 +15,7 @@ import Project from './Project';
 import ProjectSec from './ProjectSec';
 import AboutMe from './AboutMe';
 import ContactMe from './ContactMe';
+import Typewriter from 'typewriter-effect';
 
 
 export default function HomePage() {
@@ -25,10 +26,6 @@ export default function HomePage() {
 
     const particlesInit = async (main) => {
         console.log(main);
-
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
         await loadFull(main);
     };
 
@@ -47,13 +44,10 @@ export default function HomePage() {
         ],
     }));
 
-
-    const titles  = 
-
     return (
         <div className='relative flex flex-col bg-gradient-to-r from-[#000000] to-[#00121e] h-auto pb-[0px]'>
             <div className='absolute w-full h-full'>
-                <Canvas style={{ width: '100%', height: '100%', position:'static' }}>
+                <Canvas style={{ width: '100%', height: '100%', position: 'static' }}>
 
                     <Stars
                         stars={stars}
@@ -66,8 +60,8 @@ export default function HomePage() {
 
                 </Canvas>
             </div>
-             {/* Mesh Style  */}
-                 {/* <div className='absolute flex flex-row items-center justify-center w-[80%] h-[100%]'>
+            {/* Mesh Style  */}
+            {/* <div className='absolute flex flex-row items-center justify-center w-[80%] h-[100%]'>
                     <Particles
                         id="tsparticles1"
                         init={particlesInit}
@@ -197,7 +191,7 @@ export default function HomePage() {
                 </div> */}
             <div id='Home' className='relative w-full h-[100vh] flex flex-col '>
 
-               
+
 
                 <div className='absolute w-full h-[96.8%] top-5 z-[5] overflow-hidden'>
                     <span className='tail_starS'></span>
@@ -217,12 +211,21 @@ export default function HomePage() {
                     <div className='flex flex-col justify-center items-startl items basis-[50%] pl-[80px]'>{/* name section */}
                         <p data-aos='fade-down' data-aos-delay="0" className='text-[#F78B51] font-Realway text-[18px] leading-[40px]'>Hello I'm</p>
                         <p data-aos='fade-down' data-aos-delay="400" className='text-[#FF6817] font-Orbitron text-[60px] leading-[45px]'>DILSHAN</p>
-                        <p data-aos='fade-down' data-aos-delay="1200" className='text-[#fff] font-Montserrat text-[25px] leading-[60px] tracking-[2px]'>Web Designer & Developer</p>
+                        {/* <p data-aos='fade-down' data-aos-delay="1200" className='text-[#fff] font-Montserrat text-[25px] leading-[60px] tracking-[2px]'>Web Designer & Developer</p> */}
                         <div className='container_position'>
-                            <div className='text_wrapper'>
-                                <p>Web Designer</p>
-                                <p>Web Developer</p>
-                                <p>UI/UX Designer</p>
+                            <p className='text-[#fff] font-Montserrat text-[25px] leading-[60px] tracking-[2px]'>I'm </p>
+                            <div className='text_wrapper text-[#fff] font-Montserrat text-[25px] leading-[60px] tracking-[4px]'>
+                                <Typewriter
+                                    options={
+                                        {
+                                            autoStart: true,
+                                            loop: true,
+                                            delay: 50,
+                                            cursor:'🛸',
+                                            strings: ["Web Designer", "Web Developer", "UI Designer"]
+                                        }
+                                    }
+                                />
                             </div>
                         </div>
                     </div>
@@ -247,7 +250,7 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <div  id="Skills" className='h-[120vh] w-full pb-[30px] pt-[40px]'>
+            <div id="Skills" className='h-[120vh] w-full pb-[30px] pt-[40px]'>
                 <Skills />
             </div>
 
@@ -256,11 +259,11 @@ export default function HomePage() {
             </div>
 
             <div id="About" className='h-auto w-full pt-[80px]'>
-              <AboutMe/>
+                <AboutMe />
             </div>
 
             <div id="Contact" className='h-auto w-full pt-[80px] z-10'>
-              <ContactMe/>
+                <ContactMe />
             </div>
 
             <div className='flex flex-col items-center justify-center h-[50px] bg-[#0a1c28] z-10 mt-[30px]'>

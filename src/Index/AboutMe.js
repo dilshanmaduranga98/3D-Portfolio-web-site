@@ -1,15 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutMe() {
+    useEffect(() => {
+        Aos.init({ duration: 3000 });
+      }, []);
   return (
     <div className="flex flex-col items-center justify-center w-full h-[100vh]">
-      <div className="pt-0 pb-[30px]">
+      <div  data-aos="fade-up" className="pt-0 pb-[30px]">
         <p className="text-[#FF6817] font-Orbitron text-[35px] leading-[30px]">
           ABOUT ME
         </p>
       </div>
 
-      <div className="w-[60%] pt-[30px]">
+      <div  data-aos="fade-up" data-aos-delay="400"className="w-[60%] pt-[30px]">
         <p className="text-center text-white leading-[35px] font-Montserrat text-[18px] text-[100] tracking-[2px]">
            Hello!👋 I'm a versatile web developer 💻 and designer 👨‍🎨
           with proficiency in HTML, CSS, JavaScript, PHP, Java, and React.js. My
