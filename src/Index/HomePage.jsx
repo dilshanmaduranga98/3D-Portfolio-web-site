@@ -48,6 +48,8 @@ export default function HomePage() {
     }));
 
 
+    const titles  = 
+
     return (
         <div className='relative flex flex-col bg-gradient-to-r from-[#000000] to-[#00121e] h-auto pb-[0px]'>
             <div className='absolute w-full h-full'>
@@ -216,6 +218,13 @@ export default function HomePage() {
                         <p data-aos='fade-down' data-aos-delay="0" className='text-[#F78B51] font-Realway text-[18px] leading-[40px]'>Hello I'm</p>
                         <p data-aos='fade-down' data-aos-delay="400" className='text-[#FF6817] font-Orbitron text-[60px] leading-[45px]'>DILSHAN</p>
                         <p data-aos='fade-down' data-aos-delay="1200" className='text-[#fff] font-Montserrat text-[25px] leading-[60px] tracking-[2px]'>Web Designer & Developer</p>
+                        <div className='container_position'>
+                            <div className='text_wrapper'>
+                                <p>Web Designer</p>
+                                <p>Web Developer</p>
+                                <p>UI/UX Designer</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div data-aos='fade-left' className='relative basis-[30%] flex felx-col justify-center'>
@@ -250,8 +259,12 @@ export default function HomePage() {
               <AboutMe/>
             </div>
 
-            <div id="Contact" className='h-auto w-full pt-[80px]'>
+            <div id="Contact" className='h-auto w-full pt-[80px] z-10'>
               <ContactMe/>
+            </div>
+
+            <div className='flex flex-col items-center justify-center h-[50px] bg-[#0a1c28] z-10 mt-[30px]'>
+                <p className='font-Montserrat text-[12px] text-[#aaa] tracking-[3px]'>Designed & Developed by Dilshan Maduranga</p>
             </div>
 
         </div>

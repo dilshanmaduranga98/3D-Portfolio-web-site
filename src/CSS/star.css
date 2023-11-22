@@ -57,3 +57,21 @@
     animation-delay: 45s;
 }
 
+.container_position
+{
+    display: flex;
+}
+
+.container_position .text_wrapper p 
+{
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    line-height: 0;
+
+    &:nth-child(2){
+        color: #FF6817;
+    }
+
+}
