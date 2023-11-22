@@ -34,8 +34,8 @@ export default function ProjectSlider() {
           style={{ backgroundImage: "url('./Project/mobi.jpg')" }}
         >
           <div className="content">
-            <div className="title">Mobile Vison</div>
-            <div className="Description">
+            <div className="title font-Montserrat">Mobile Vison</div>
+            <div className="Description font-Montserrat">
               Mobile shop web site.developed using HTML,CSS and JavaScript.
             </div>
             <Link to="https://github.com/dilshanmaduranga98/Mobile-vision-web-front-end" className='flex flex-row items-end justify-start gap-[10px]'>
@@ -50,8 +50,8 @@ export default function ProjectSlider() {
           style={{ backgroundImage: "url('./Project/shutter.jpg')" }}
         >
           <div className="content">
-            <div className="title">Shutter</div>
-            <div className="Description">
+            <div className="title font-Montserrat">Shutter</div>
+            <div className="Description font-Montserrat">
               Social media clone web site.developed using HTML,CSS and
               JavaScript.{" "}
             </div>
@@ -67,8 +67,8 @@ export default function ProjectSlider() {
           style={{ backgroundImage: "url('./Project/slGro.jpg')" }}
         >
           <div className="content">
-            <div className="title">Sl Grocery</div>
-            <div className="Description">
+            <div className="title font-Montserrat">Sl Grocery</div>
+            <div className="Description font-Montserrat">
               E-Commerce web site.developed using HTML, CSS and JavaScript.
             </div>
             <Link to="https://github.com/dilshanmaduranga98/E-commerce-web-site" className='flex flex-row items-end justify-start gap-[10px]'>
@@ -83,8 +83,8 @@ export default function ProjectSlider() {
           style={{ backgroundImage: "url('./Project/wint.jpg')" }}
         >
           <div className="content">
-            <div className="title">WintanCare</div>
-            <div className="Description">
+            <div className="title font-Montserrat">WintanCare</div>
+            <div className="Description font-Montserrat">
               Appointment web application.developed using HTML, CSS, JavaScript.
             </div>
             <Link to="https://github.com/dilshanmaduranga98/Mobile-vision-web-front-end" className='flex flex-row items-end justify-start gap-[10px]'>

@@ -13,6 +13,9 @@ import Skills from './Skills';
 import ProjectSlider from './ProjectSlider';
 import Project from './Project';
 import ProjectSec from './ProjectSec';
+import AboutMe from './AboutMe';
+import ContactMe from './ContactMe';
+
 
 export default function HomePage() {
 
@@ -46,16 +49,16 @@ export default function HomePage() {
 
 
     return (
-        <div className='relative flex flex-col bg-gradient-to-tl from-[#000000] to-[#001a2b] h-auto pb-[60px]'>
+        <div className='relative flex flex-col bg-gradient-to-r from-[#000000] to-[#00121e] h-auto pb-[0px]'>
             <div className='absolute w-full h-full'>
-                <Canvas style={{ width: '100%', height: '100%' }}>
+                <Canvas style={{ width: '100%', height: '100%', position:'static' }}>
 
                     <Stars
                         stars={stars}
-                        radius={90} // Radius of the sphere
-                        depth={200}  // Number of layers of stars
-                        count={6000} // Number of stars
-                        // factor={4.5}   // Size factor
+                        radius={100} // Radius of the sphere
+                        depth={100}  // Number of layers of stars
+                        count={12000} // Number of stars
+                        factor={4.5}   // Size factor
                         saturation={20} // Saturation of the stars
                     />
 
@@ -241,6 +244,14 @@ export default function HomePage() {
 
             <div id="Projects" className='h-auto w-full pt-[80px]'>
                 <ProjectSec />
+            </div>
+
+            <div id="About" className='h-auto w-full pt-[80px]'>
+              <AboutMe/>
+            </div>
+
+            <div id="Contact" className='h-auto w-full pt-[80px]'>
+              <ContactMe/>
             </div>
 
         </div>
