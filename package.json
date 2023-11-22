@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@mediapipe/tasks-vision": "^0.10.8",
+    "@mui/icons-material": "^5.14.18",
     "@react-three/drei": "^9.88.14",
     "@react-three/fiber": "^8.15.11",
     "@react-three/postprocessing": "^2.15.11",

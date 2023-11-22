@@ -10,6 +10,9 @@ import { Stars } from '@react-three/drei';
 import Ball from '../components/Ball';
 import '../CSS/star.css'
 import Skills from './Skills';
+import ProjectSlider from './ProjectSlider';
+import Project from './Project';
+import ProjectSec from './ProjectSec';
 
 export default function HomePage() {
 
@@ -43,7 +46,7 @@ export default function HomePage() {
 
 
     return (
-        <div className='relative flex flex-col bg-gradient-to-tl from-[#000000] to-[#001a2b]'>
+        <div className='relative flex flex-col bg-gradient-to-tl from-[#000000] to-[#001a2b] h-auto pb-[60px]'>
             <div className='absolute w-full h-full'>
                 <Canvas style={{ width: '100%', height: '100%' }}>
 
@@ -58,10 +61,8 @@ export default function HomePage() {
 
                 </Canvas>
             </div>
-            <div id='Home' className='relative w-full h-[100vh] flex flex-col '>
-               
-               {/* Mesh Style */}
-               {/* <div className='absolute flex flex-row items-center justify-center w-[100%] h-[100%]'>
+             {/* Mesh Style  */}
+                 {/* <div className='absolute flex flex-row items-center justify-center w-[80%] h-[100%]'>
                     <Particles
                         id="tsparticles1"
                         init={particlesInit}
@@ -189,6 +190,9 @@ export default function HomePage() {
                     />
 
                 </div> */}
+            <div id='Home' className='relative w-full h-[100vh] flex flex-col '>
+
+               
 
                 <div className='absolute w-full h-[96.8%] top-5 z-[5] overflow-hidden'>
                     <span className='tail_starS'></span>
@@ -196,27 +200,6 @@ export default function HomePage() {
                     <span className='tail_starS'></span>
 
                 </div>
-
-                {/* Mars */}
-                {/* <div data-aos='fade-down' className='absolute w-[10%] h-[20%] left-0 top-5 z-[5] overflow-hidden'>
-                <Ball
-                    color='#ccc'
-                    speedX={0.03}
-                    speedY={0.001}
-                    TexturePath="./mars_tex.jpg"
-                />
-            </div> */}
-
-
-                {/* Sun */}
-                {/* <div data-aos='fade-down' className='absolute w-[9%] h-[16%] left-[50%] top-5 z-[5] overflow-hidden'>
-                <Ball
-                    color='#ccc'
-                    speedX={0.001}
-                    speedY={0.001}
-                    TexturePath="./sun_tex.jpg"
-                />
-            </div> */}
 
                 {/*my logo section  */}
                 <div data-aos='fade-down' className='z-10 flex flex-row justify-center w-full pt-8'>
@@ -251,7 +234,15 @@ export default function HomePage() {
                     />
                 </div>
             </div>
-            <Skills />
+
+            <div  id="Skills" className='h-[120vh] w-full pb-[30px] pt-[40px]'>
+                <Skills />
+            </div>
+
+            <div id="Projects" className='h-auto w-full pt-[80px]'>
+                <ProjectSec />
+            </div>
+
         </div>
     )
 }

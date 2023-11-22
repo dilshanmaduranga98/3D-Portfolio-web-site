@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import ProjectSlider from './ProjectSlider';
 
 export default function Project() {
 
@@ -26,7 +27,11 @@ export default function Project() {
 
             </div>
 
-            <div className='flex flex-row justify-center items-center w-full pl-[120px] pr-[60px] pt-[40px] pb-[40px] gap-4'>
+            <div className='relative w-full h-full'>
+                <ProjectSlider/>
+            </div>
+
+            {/* <div className='flex flex-row justify-center items-center w-full pl-[120px] pr-[60px] pt-[40px] pb-[40px] gap-4'>
             
             {/* //01 */}
                 <div className='flex flex-col justify-center items-center basis-[70%] h-[80vh] gap-4'>
@@ -94,7 +99,7 @@ export default function Project() {
                             GitHubLink= 'https://github.com/dilshanmaduranga98/Mobile-vision-web-front-end'
                             />
                 </div>
-            </div>
+            {/* </div>*/}
         </div>
     );
 }

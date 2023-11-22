@@ -4,145 +4,88 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import ThreeD from "./ThreeD";
 import Ball from "../components/Ball";
+import ThreeDText from "../components/ThreeDText";
+import ThreeDTextTwo from "../components/ThreeDTextTwo";
 
 export default function Skills() {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
 
-  const [isBallClicked, setIsBallClicked] = useState(false);
-
-  const handleBallClick = () => {
-    setIsBallClicked(!isBallClicked);
-    console.log("click");
-  };
-
   return (
     <div
-      id="Skills"
-      className="z-10 relative flex flex-col justify-start items-start mt-[120px] h-[100vh]"
+     
+      className="z-10 relative overflow-hidden flex flex-col justify-start items-start pt-[30px] mb-[40px] h-[100vh]"
     >
-      <div  data-aos='fade-up' className="flex flex-col items-center justify-center w-full pt-[20px]">
+      <div
+        data-aos="fade-up"
+        className="z-[30] flex flex-col items-center justify-center w-full pt-[20px]"
+      >
         <p className="text-[#FF6817] font-Orbitron text-[35px] leading-[45px]">
-          {" "}
-          SKILLS{" "}
+          SKILLS
         </p>
       </div>
 
-      {isBallClicked && (<div className="relative flex flex-row items-start justify-center w-full p-[50px]">
-        {/* <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" className='Line-one'>
-              <path d="M 10 20 l 60 0 l 120 65" fill="none" stroke="white"/>
-            </svg> */}
+      <div className="absolute top-[40px] left-0 z-[20] w-full h-full">
+        <ThreeDText />
+      </div>
 
-        {/* for HTML */}
-        <svg
-          width="350"
-          height="100"
-          xmlns="http://www.w3.org/2000/svg"
-          className="Line-one html"
-        >
-          <path d="M 10 20 l 80 0 l 80 60" fill="none" stroke="white" />
-        </svg>
+      <div className="absolute top-[40px] left-5 w-full h-[95%] z-[5]">
+        <ThreeDTextTwo/>
+      </div>
 
-        <div className="absolute top-[60px] left-[395px]">
-          <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">HTML</p>
-        </div>
+      {/* <div className="relative flex flex-row items-start justify-center w-full p-[50px]">
+        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
+          HTML
+        </p>
 
-        {/* for CSS */}
-        <svg
-          width="350"
-          height="100"
-          xmlns="http://www.w3.org/2000/svg"
-          className="Line-one css"
-        >
-          <path d="M 10 20 l 80 0 l 60 40" fill="none" stroke="white" />
-        </svg>
+        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
+          CSS
+        </p>
 
-        <div className="absolute top-[210px] left-[320px]">
-          <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">CSS</p>
-        </div>
+        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
+          JS
+        </p>
 
-        {/* for JS */}
-        <svg
-          width="400"
-          height="190"
-          xmlns="http://www.w3.org/2000/svg"
-          className="Line-one js pt-[70px]"
-        >
-          <path d="M 10 40 l 80 0 l 150 -43" fill="none" stroke="white" />
-        </svg>
+        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
+          PHP
+        </p>
 
-        <div className="absolute top-[380px] left-[350px]">
-          <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">JS</p>
-        </div>
+        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
+          REACT JS
+        </p>
 
-        {/* for PHP */}
-        <svg
-          width="250"
-          height="120"
-          xmlns="http://www.w3.org/2000/svg"
-          className="Line-one php"
-        >
-          <path d="M 10 100 l 100 -0 l 80 -180" fill="none" stroke="white"/>
-        </svg>
+        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
+          TAILWIND CSS
+        </p>
 
-        <div className="absolute top-[520px] left-[450px]">
-          <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">PHP</p>
-        </div>
+        <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
+          JAVA
+        </p>
+      </div> */}
 
-        {/* for REACTJS */}
-        <svg
-          width="350"
-          height="100"
-          xmlns="http://www.w3.org/2000/svg"
-          className="Line-one react"
-        >
-          <path d="M 150 80 l -80 0 l -80 -20" fill="none" stroke="white" />
-        </svg>
-
-        <div className="absolute top-[250px] left-[1000px]">
-          <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-            REACT JS
-          </p>
-        </div>
-
-        {/* for TAILWINDCSS */}
-        <svg
-          width="350"
-          height="100"
-          xmlns="http://www.w3.org/2000/svg"
-          className="Line-one tailwind"
-        >
-          <path d="M 150 80 l -80 0 l -80 -60" fill="none" stroke="white" />
-        </svg>
-
-        <div className="absolute top-[450px] left-[900px]">
-          <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">
-            TAILWIND CSS
-          </p>
-        </div>
-
-        {/* for JAVA */}
-        <svg
-          width="350"
-          height="100"
-          xmlns="http://www.w3.org/2000/svg"
-          className="Line-one java"
-        >
-          <path d="M 200 40 l -120 0 l -80 60" fill="none" stroke="white" />
-        </svg>
-
-        <div className="absolute top-[80px] left-[920px]">
-          <p className="text-[#FF6817] font-IBM text-[18px] font-bold skill_text">JAVA</p>
-        </div>
-      </div>)}
-
-      <div  data-aos='fade-up' onClick={handleBallClick} className="absolute top-0 left-0 z-10 w-full h-full pt-[20px]">
+      <div
+        data-aos="fade-up"
+        className="absolute top-[10px] left-0 z-[10] w-full h-full pt-[20px]"
+      >
         <Ball
           speedX={0.001}
           speedY={0.002}
-          color="#fda600"
+          color="#f4ac85"
           TexturePath={"./mars_tex.jpg"}
+        />
+      </div>
+
+
+      <div
+        data-aos="fade-right"
+        className="absolute top-[20px] left-0 z-10 w-[250px] h-300px pt-[20px]"
+      >
+        <Ball
+          speedX={0.008}
+          speedY={0.005}
+          color="#94adff"
+          TexturePath={"./earth_tex.jpg"}
         />
       </div>
     </div>

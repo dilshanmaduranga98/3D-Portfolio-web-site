@@ -29,7 +29,7 @@ export default function NavBar() {
     // </div>
 
     <div className='flex flex-col justify-start gap-10 pl-10 font-Realway'> {/* nav bar section*/}
-            <Link spy={true} smooth={true} offset={50} duration={800} data-aos='fade-right' to="Home" className='hover:scale-[1.2] transition duration-800'>
+            <Link spy={true} smooth={true} duration={800} data-aos='fade-right' to="Home" className='hover:scale-[1.2] transition duration-800'>
                 <span className='text-[#FF6817] text-[19px] font-black tracking-[3px]'>H</span> 
                 <span className='text-[#fff] text-[10px] font-light tracking-[2px]'>ome</span>
             </Link>
