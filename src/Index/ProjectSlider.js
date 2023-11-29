@@ -29,6 +29,9 @@ export default function ProjectSlider() {
   return (
     <div className="container">
       <div className="slider" id="slide">
+
+
+        
         <div
           className="item"
           style={{ backgroundImage: "url('./Project/mobi.jpg')" }}
@@ -96,11 +99,11 @@ export default function ProjectSlider() {
       </div>
 
       <div className="button_div">
-        <button id="prev">
+        <button id="next">
           <img src="./Project/prew.png" width={25} />
         </button>
 
-        <button id="next">
+        <button id="prev">
           <img src="./Project/next.png" width={25} />
         </button>
       </div>

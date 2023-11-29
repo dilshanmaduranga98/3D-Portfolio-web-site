@@ -1,10 +1,6 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
-import Home from './Index/Home';
 import NavBar from './components/NavBar';
-import About from './Index/About';
-import Project from './Index/Project';
-import ThreeD from './Index/ThreeD';
 import HomePage from './Index/HomePage';
 
 function App() {

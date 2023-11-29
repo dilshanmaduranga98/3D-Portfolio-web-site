@@ -1,33 +1,67 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useForm, ValidationError } from "@formspree/react";
-import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "../CSS/toastyCSS.css";
+
+import emailjs from "@emailjs/browser";
 
 export default function ContactMe() {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
 
-  
-  const navigate = useNavigate();
+  // rocket travel function
+  const [isRocketActive, setRocketActive] = useState(false);
 
-  const [state, handleSubmit] = useForm("mvojjpoe");
-  if (state.succeeded) {
+  const handleButtonClick = () => {
+    setRocketActive(!isRocketActive);
+    console.log(isRocketActive);
+  };
 
-    return(
-      {
-      }
-    )
-  }
-  
+  const notify = () =>
+    toast("Thank you for your feedback!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
+const [nameVal, setNameVal] = useState();
+const [emailVal, setEmailVal] = useState();
+const [messageVal, setMessageVal] = useState();
+     
+    const reset = () => {
+      setNameVal('');
+      setEmailVal('');
+      setMessageVal('');
+      
+    }
+  const sendEmail = (e) => {
+    e.preventDefault();
+    notify();
+
+    emailjs.sendForm(
+      "service_9ud5w4t",
+      "template_hrcro8a",
+      e.target,
+      "Y6KFlPHGYRyIO4SNG"
+    );
+    handleButtonClick();
+    reset();
+  };
+
   return (
-    <div className="flex flex-col items-center justify-start w-full h-[100vh] z-[20]">
+    <div className="relative flex flex-col items-center justify-start w-full h-[95vh] z-[20] overflow-hidden">
       <div
         data-aos="fade-up"
-        className=" flex flex-col justify-center items-center pt-[40px] pb-[30px]"
+        data-aos-once="true"
+        className=" flex flex-col justify-center items-center pt-[40px] pb-[30px] z-10"
       >
         <p className="text-[#FF6817] font-Orbitron text-[35px] leading-[50px]">
           REACH ME
@@ -38,46 +72,83 @@ export default function ContactMe() {
         </p>
       </div>
 
-      <div
-        data-aos="fade-up"
-        className="flex flex-col items-center justify-center w-full h-auto gap-5 mt-5"
-      >
-        <form className="flex flex-col items-center justify-center w-full h-auto gap-5 mt-5" onSubmit={handleSubmit}>
+      <div className="z-10 flex flex-col items-center justify-center w-full h-auto gap-3 mt-2">
+        <form
+          className="flex flex-col items-center justify-center w-full h-auto gap-5 mt-5"
+          onSubmit={sendEmail}
+        >
           <input
             data-aos="fade-up"
+            data-aos-once="true"
             id="name"
             name="name"
             type="text"
+            required
+            value={nameVal} 
+            onChange={(e) => setNameVal(e.target.value)}
             placeholder="full name"
-            className="pb-[20px] bg-[#ff68174c] rounded-[8px] w-[750px] pl-5 p-[5px] outline-none placeholder-[#ffb685] text-white"
+            className="pb-[10px] bg-[#ff68174c] rounded-[8px] w-[750px] pl-5 p-[5px] outline-none placeholder-[#ffb685] text-white"
           />
           <input
             data-aos="fade-up"
+            data-aos-once="true"
             data-aos-delay="300"
             id="email"
             type="email"
             name="email"
+            required
+            value={emailVal} 
+            onChange={(e) => setEmailVal(e.target.value)}
             placeholder="email"
-            className="pb-[20px] bg-[#ff68174c] rounded-[8px] w-[750px] pl-5 p-[5px] outline-none placeholder-[#ffb685] text-white"
+            className="pb-[10px] bg-[#ff68174c] rounded-[8px] w-[750px] pl-5 p-[5px] outline-none placeholder-[#ffb685] text-white"
           />
 
           <textarea
             data-aos="fade-up"
+            data-aos-once="true"
             data-aos-delay="600"
             id="message"
             name="message"
+            required
+            value={messageVal} 
+            onChange={(e) => setMessageVal(e.target.value)}
             placeholder="message"
             rows={6}
-            className="pb-[20px] bg-[#ff68174c] rounded-[8px] w-[750px] pl-5 p-[5px] outline-none placeholder-[#ffb685] text-white"
+            className="pb-[10px] bg-[#ff68174c] rounded-[8px] w-[750px] pl-5 p-[5px] outline-none placeholder-[#ffb685] text-white"
           />
-          <button type="submit" disabled={state.submitting} className="w-[750px] pt-[6px] pb-[6px] bg-[#FF6817] text-white rounded-[8px] font-Montserrat hover:bg-[#f78e55]">
+          <button
+            data-aos="zoom-in"
+            data-aos-delay="1000"
+            data-aos-once="true"
+            type="submit"
+            className="w-[750px] pt-[6px] mt-5 pb-[6px] bg-[#FF6817] text-white rounded-[8px] font-Montserrat hover:bg-[#f78e55]"
+          >
             send 🚀
           </button>
-          <ToastContainer />
         </form>
-        
       </div>
-      
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+
+      {/* rocket animation */}
+      <div className={`rocket ${isRocketActive ? "active" : ""}`}>
+        <img
+          src="assests/rocket_3d.png"
+          alt="rocket"
+          width={50}
+          className="rocket_img"
+        />
+      </div>
     </div>
   );
 }
